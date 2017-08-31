@@ -182,6 +182,7 @@ def test_get_inputs(get_inputs):
 
 def test_get_init_cell(get_init_cell):
     with tf.Graph().as_default():
+        #Added shape [] in order to be compatible witf tf >= 1.2
         test_batch_size_ph = tf.placeholder(tf.int32)
         test_rnn_size = 256
 
